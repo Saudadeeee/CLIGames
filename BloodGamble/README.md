@@ -1,21 +1,21 @@
-# 🎲 BloodGamble - Vietnamese Poker with Cheating Mechanics
+# BloodGamble - Vietnamese Poker with Cheating Mechanics
 
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://en.cppreference.com/w/cpp/17)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green.svg)](https://github.com/Saudadeeee/CLIGames)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📖 Tổng quan
+## Tổng quan
 
 **BloodGamble** là một game poker Texas Hold'em độc đáo với cơ chế gian lận sáng tạo. Người chơi đóng vai một kẻ gian lận chuyên nghiệp phải đối đầu với 3 AI "Hell Soldiers" (Quân lính địa ngục). Thay vì đặt tiền, tất cả đặt **HP (Health Points)** - khi hết HP sẽ bị loại khỏi game!
 
-### ✨ Điểm đặc biệt:
-- 🩸 **HP-based betting**: Đặt cược bằng máu thay vì tiền
-- 🎭 **Advanced cheating system**: 7 loại gian lận với detection mechanics
-- 🤖 **Smart AI opponents**: AI với personality và adaptive behavior  
-- 🎨 **Colored interface**: Cards với màu sắc, menu số thân thiện
-- 📊 **Vigilance system**: Hệ thống cảnh giác động làm game thử thách hơn
+### Điểm đặc biệt:
+- **HP-based betting**: Đặt cược bằng máu thay vì tiền
+- **Advanced cheating system**: 7 loại gian lận với detection mechanics
+- **Smart AI opponents**: AI với personality và adaptive behavior  
+- **Colored interface**: Cards với màu sắc, menu số thân thiện
+- **Vigilance system**: Hệ thống cảnh giác động làm game thử thách hơn
 
-## 🎮 Gameplay
+## Gameplay
 
 ### Luật chơi cơ bản:
 - **Texas Hold'em** chuẩn với 2 hole cards + 5 community cards
@@ -23,11 +23,11 @@
 - Betting rounds: **Pre-flop → Flop → Turn → River → Showdown**
 - Blinds: Small blind 1 HP, Big blind 2 HP
 
-### 🏆 Điều kiện thắng/thua:
+### Điều kiện thắng/thua:
 - **Thắng**: Tất cả AI về 0 HP
 - **Thua**: Player về 0 HP hoặc bị phát hiện gian lận quá nhiều
 
-## 🔧 Cài đặt & Chạy
+## Cài đặt & Chạy
 
 ### Yêu cầu hệ thống:
 - **C++17** compiler (GCC, Clang, MSVC)
@@ -73,7 +73,7 @@ g++ -std=c++17 -Wall -Wextra -O2 -Iinclude \
     -o BloodGamble
 ```
 
-## 🎯 Hướng dẫn chơi
+## Hướng dẫn chơi
 
 ### Menu chính:
 ```
@@ -91,7 +91,7 @@ YOUR TURN! Current bet to call: 2 HP
 Choose (1-7): 
 ```
 
-### 🎭 Hệ thống gian lận:
+### Hệ thống gian lận:
 
 | Cheat | Mô tả | Detection Risk | HP Penalty | Cooldown |
 |-------|-------|----------------|------------|----------|
@@ -103,48 +103,48 @@ Choose (1-7):
 | **CardMarking** | Bias luck cho card draw | 15% | 12 HP | 6 rounds |
 | **BluffBoost** | Làm tất cả AI thận trọng | 8% | 6 HP | 3 rounds |
 
-### ⚠️ Vigilance System:
+### Vigilance System:
 - **Vigilance** tăng khi: Player thắng nhiều, bị phát hiện cheat
 - **Vigilance** giảm khi: AI thắng, thời gian trôi qua
 - **High vigilance** = Xác suất phát hiện cheat cao hơn
 - **Risk management** là chìa khóa thành công!
 
-## 🏗️ Kiến trúc Project
+## Kiến trúc Project
 
-### 📁 Cấu trúc thư mục:
+### Cấu trúc thư mục:
 ```
 BloodGamble/
-├── 📁 include/
-│   ├── 📁 core/          # Core game components
+├── include/
+│   ├── core/          # Core game components
 │   │   ├── Card.h        # Card representation & Deck
 │   │   ├── Player.h      # Player data structure  
 │   │   ├── HandEvaluator.h # Poker hand evaluation
 │   │   └── Config.h      # Game constants
-│   ├── 📁 game/          # Game logic
+│   ├── game/          # Game logic
 │   │   ├── GameState.h   # Game state management
 │   │   ├── CheatSystem.h # Cheating mechanics
 │   │   └── BloodGambleGame.h # Main game controller
-│   └── 📁 ai/
+│   └── ai/
 │       └── AIPlayer.h    # AI decision making
-├── 📁 src/              # Implementation files
-│   ├── 📁 core/
-│   ├── 📁 game/
-│   └── 📁 ai/
-├── 📁 build/            # Compiled binaries
-├── 📁 docs/             # Documentation
+├── src/              # Implementation files
+│   ├── core/
+│   ├── game/
+│   └── ai/
+├── build/            # Compiled binaries
+├── docs/             # Documentation
 ├── main.cpp             # Entry point
 ├── Makefile             # Build configuration
 └── README.md            # This file
 ```
 
-### 🔧 Design Patterns sử dụng:
+### Design Patterns sử dụng:
 - **Modular Architecture**: Tách biệt concerns rõ ràng
 - **Strategy Pattern**: AI behavior switching
 - **Observer Pattern**: Vigilance system monitoring
 - **Command Pattern**: Player actions handling
 - **Factory Pattern**: Cheat types creation
 
-## 🤖 AI System
+## AI System
 
 ### AI Personalities:
 - **Aggression**: 0.0-1.0 (Độ hung hăng)
@@ -158,19 +158,19 @@ BloodGamble/
 - **Betting**: Pot odds calculation
 - **Bluff detection**: Pattern recognition
 
-## 🎨 Features
+## Features
 
-### ✅ Đã hoàn thành:
+### Đã hoàn thành:
 - [x] Complete Texas Hold'em implementation
 - [x] 7 unique cheating mechanics
 - [x] Dynamic vigilance system
-- [x] Colored card display (♠️♦️♣️♥️)
+- [x] Colored card display
 - [x] Number-based menu system
 - [x] Winning hand descriptions
 - [x] Modular code architecture
 - [x] Cross-platform compatibility
 
-### 🚧 Có thể mở rộng:
+### Có thể mở rộng:
 - [ ] Multiplayer online support
 - [ ] Tournament mode
 - [ ] Achievement system
@@ -179,7 +179,7 @@ BloodGamble/
 - [ ] Statistics tracking
 - [ ] Sound effects
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common issues:
 
@@ -204,7 +204,7 @@ Enter seed: 12345  # Use same seed to reproduce
 - Memory usage ~5MB
 - No external dependencies required
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Areas for improvement:
 - **Balance tuning**: Cheat detection probabilities
@@ -213,7 +213,7 @@ Contributions welcome! Areas for improvement:
 - **Performance**: Optimization opportunities
 - **Testing**: Unit tests for core logic
 
-## 📝 Development Notes
+## Development Notes
 
 ### Code Style:
 - **C++17** standard features
@@ -234,16 +234,16 @@ Enter seed: 42 # Fixed seed for testing
 - Check vigilance calculations
 - Monitor AI decision trees
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Saudadeeee** - [GitHub Profile](https://github.com/Saudadeeee)
 
 ---
 
-*Game được phát triển với tình yêu dành cho poker và passion về game mechanics sáng tạo! 🎲❤️*
+*Game được phát triển với tình yêu dành cho poker và passion về game mechanics sáng tạo!*
 
-**Enjoy the thrill of cheating without real-world consequences!** 😈
+**Enjoy the thrill of cheating without real-world consequences!**
