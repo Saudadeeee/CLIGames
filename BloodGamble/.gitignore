@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+*.exe
+*.out
+*.o
+*.obj
+
+# IDE files
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Debug files
+*.pdb
+*.ilk
+
+# Backup files
+*.bak
+*.backup
+
+# Logs
+*.log
+
+# User-specific files
+.user
+*.suo
